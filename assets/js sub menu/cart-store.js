@@ -1,3 +1,18 @@
+/*
+============================================================
+NANDA FOOD EXPORT — PROPRIETARY SOURCE CODE
+Copyright © 2026 PT. Nanda Food And Agriculture.
+All Rights Reserved.
+
+Unauthorized copying, modification, distribution, publication,
+or reuse of this proprietary source code, in whole or in substantial
+part, is prohibited without prior written permission from
+PT. Nanda Food And Agriculture.
+
+Third-party materials remain subject to their respective licenses.
+============================================================
+*/
+
 /*!
  * ==========================================================
  * NANDA FOOD EXPORT
