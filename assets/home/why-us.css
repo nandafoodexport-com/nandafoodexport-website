@@ -1,0 +1,470 @@
+/* ==========================================
+   WHY US SECTION
+========================================== */
+
+#why-us{
+padding:45px 0;
+background:var(--white);
+}
+
+/* ==========================================
+   SECTION HEADING
+========================================== */
+
+.section-heading{
+text-align:center;
+margin-bottom:35px;
+}
+
+.section-heading h2{
+font-size:30px;
+color:var(--primary);
+margin:14px 0;
+line-height:1.2;
+}
+
+.section-heading p{
+max-width:600px;
+margin:auto;
+font-size:15px;
+line-height:1.7;
+color:var(--text-light);
+}
+
+/* ==========================================
+   WHY WRAPPER
+========================================== */
+
+.why-wrapper{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+}
+
+/* ==========================================
+   WHY ITEM
+========================================== */
+
+.why-item{
+text-align:center;
+padding:0 16px;
+position:relative;
+}
+
+/* vertical separator like blueprint */
+
+.why-item:not(:last-child)::after{
+content:"";
+position:absolute;
+top:20%;
+right:0;
+width:1px;
+height:60%;
+background:var(--border);
+}
+
+/* ==========================================
+   WHY ICON
+========================================== */
+
+.why-icon{
+margin-bottom:14px;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.why-icon i{
+font-size:34px;
+color:var(--primary);
+line-height:1;
+}
+
+/* ==========================================
+   WHY TITLE
+========================================== */
+
+.why-item h3{
+font-size:15px;
+font-weight:600;
+color:var(--primary);
+line-height:1.4;
+margin-bottom:10px;
+text-transform:uppercase;
+}
+
+/* ==========================================
+   WHY TEXT
+========================================== */
+
+.why-item p{
+font-size:13px;
+line-height:1.6;
+color:var(--text-light);
+max-width:180px;
+margin:0 auto;
+}
+
+/* ==========================================
+   TABLET RESPONSIVE
+========================================== */
+
+@media (max-width:992px){
+
+#why-us{
+padding:60px 0;
+}
+
+/* HEADING */
+
+.section-heading{
+margin-bottom:42px;
+}
+
+.section-heading h2{
+font-size:34px;
+line-height:1.2;
+}
+
+.section-heading p{
+font-size:16px;
+line-height:1.8;
+max-width:700px;
+}
+
+/* GRID */
+
+.why-wrapper{
+grid-template-columns:repeat(2,1fr);
+gap:18px;
+}
+
+/* REMOVE DESKTOP SEPARATOR */
+
+.why-item:not(:last-child)::after{
+display:none;
+}
+
+/* CARD */
+
+.why-item{
+background:#ffffff;
+
+padding:26px 20px;
+
+border-radius:22px;
+
+border:
+1px solid rgba(46,94,62,0.05);
+
+box-shadow:
+0 10px 24px rgba(46,94,62,0.04);
+
+transition:.3s ease;
+
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:flex-start;
+
+min-height:240px;
+}
+
+/* HOVER */
+
+.why-item:hover{
+transform:translateY(-4px);
+}
+
+/* ICON WRAPPER */
+
+.why-icon{
+width:74px;
+height:74px;
+
+margin:0 auto 18px;
+
+background:
+rgba(46,94,62,0.05);
+
+border-radius:50%;
+
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+/* ICON */
+
+.why-icon i{
+font-size:30px;
+}
+
+/* TITLE */
+
+.why-item h3{
+font-size:16px;
+line-height:1.4;
+
+margin-bottom:10px;
+
+text-transform:none;
+}
+
+/* TEXT */
+
+.why-item p{
+font-size:14px;
+line-height:1.7;
+
+max-width:240px;
+}
+
+}
+
+/* ==========================================
+   MOBILE RESPONSIVE
+========================================== */
+
+@media (max-width:768px){
+
+#why-us{
+padding:50px 0;
+}
+
+/* HEADING */
+
+.section-heading{
+margin-bottom:32px;
+}
+
+.section-heading h2{
+font-size:24px;
+line-height:1.3;
+}
+
+.section-heading p{
+font-size:14px;
+line-height:1.85;
+
+max-width:100%;
+
+text-align:justify;
+
+color:var(--text-light);
+
+word-break:normal;
+overflow-wrap:normal;
+
+hyphens:none;
+-webkit-hyphens:none;
+-ms-hyphens:none;
+}
+
+/* GRID */
+
+.why-wrapper{
+grid-template-columns:1fr;
+gap:14px;
+}
+
+/* CARD */
+
+.why-item{
+background:#ffffff;
+
+padding:18px 16px;
+
+border-radius:18px;
+
+border:
+1px solid rgba(46,94,62,0.05);
+
+box-shadow:
+0 8px 18px rgba(46,94,62,0.035);
+
+display:grid;
+grid-template-columns:58px 1fr;
+align-items:center;
+gap:14px;
+
+text-align:left;
+
+min-height:auto;
+}
+
+/* REMOVE DESKTOP SEPARATOR */
+
+.why-item:not(:last-child)::after{
+display:none;
+}
+
+/* ICON WRAPPER */
+
+.why-icon{
+width:58px;
+height:58px;
+
+margin:0;
+
+background:
+rgba(46,94,62,0.05);
+
+border-radius:50%;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+grid-row:span 2;
+}
+
+/* ICON */
+
+.why-icon i{
+font-size:22px;
+}
+
+/* TITLE */
+
+.why-item h3{
+font-size:15px;
+
+margin-bottom:2px;
+
+line-height:1.3;
+
+text-transform:none;
+}
+
+/* TEXT */
+
+.why-item p{
+font-size:12px;
+line-height:1.6;
+
+max-width:100%;
+margin:0;
+}
+
+}
+
+/* ==========================================
+   ANIMATION STATE
+========================================== */
+
+.why-item.show-why{
+opacity:1;
+transform:translateY(0);
+}
+
+/* ==========================================
+   WHY US — DESKTOP PREMIUM POLISH
+========================================== */
+
+@media (min-width:993px){
+
+/* ==========================================
+   REMOVE OLD SEPARATOR
+========================================== */
+
+.why-item:not(:last-child)::after{
+display:none;
+}
+
+/* ==========================================
+   CARD STYLE (NAIK LEVEL)
+========================================== */
+
+.why-item{
+background:var(--white);
+
+padding:28px 22px;
+
+border-radius:18px;
+
+border:1px solid rgba(46,94,62,0.06);
+
+box-shadow:
+0 8px 20px rgba(46,94,62,0.05);
+
+transition:all .3s ease;
+
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:flex-start;
+
+min-height:230px;
+}
+
+/* ==========================================
+   HOVER PREMIUM
+========================================== */
+
+.why-item:hover{
+transform:translateY(-6px);
+
+box-shadow:
+0 16px 30px rgba(46,94,62,0.10);
+}
+
+/* ==========================================
+   ICON WRAPPER (BIAR HIDUP)
+========================================== */
+
+.why-icon{
+width:72px;
+height:72px;
+
+margin-bottom:16px;
+
+background:rgba(46,94,62,0.06);
+
+border-radius:50%;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+transition:all .3s ease;
+}
+
+/* icon hover effect */
+.why-item:hover .why-icon{
+background:var(--primary);
+}
+
+.why-item:hover .why-icon i{
+color:#fff;
+}
+
+/* ==========================================
+   ICON
+========================================== */
+
+.why-icon i{
+font-size:30px;
+transition:.3s ease;
+}
+
+/* ==========================================
+   TITLE
+========================================== */
+
+.why-item h3{
+font-size:16px;
+margin-bottom:8px;
+text-transform:none;
+}
+
+/* ==========================================
+   TEXT
+========================================== */
+
+.why-item p{
+font-size:13px;
+max-width:220px;
+}
+
+}

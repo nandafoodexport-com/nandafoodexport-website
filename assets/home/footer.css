@@ -1,0 +1,471 @@
+/* ==========================================
+   FOOTER SECTION
+========================================== */
+
+#footer{
+
+position:relative;
+overflow:hidden;
+
+padding:55px 0 20px;
+
+color:var(--white);
+
+/* luxury dark background */
+
+background:
+
+linear-gradient(
+135deg,
+#16241b,
+#1d2d22
+),
+
+radial-gradient(
+circle at top right,
+rgba(240,182,63,0.16),
+transparent 26%
+),
+
+radial-gradient(
+circle at bottom left,
+rgba(240,182,63,0.10),
+transparent 28%
+);
+
+opacity:1;
+transform:translateY(0px);
+transition:.8s ease;
+
+}
+
+/* ==========================================
+   GOLD TOP BORDER
+========================================== */
+
+#footer::after{
+
+content:"";
+
+position:absolute;
+top:0;
+left:0;
+
+width:100%;
+height:1px;
+
+background:
+linear-gradient(
+90deg,
+transparent,
+rgba(240,182,63,0.55),
+transparent
+);
+
+z-index:3;
+
+}
+
+/* ==========================================
+   AMBIENT GOLD GLOW
+========================================== */
+
+#footer::before{
+
+content:"";
+
+position:absolute;
+
+top:-120px;
+right:-100px;
+
+width:280px;
+height:280px;
+
+background:
+rgba(240,182,63,0.08);
+
+filter:blur(85px);
+
+border-radius:50%;
+
+pointer-events:none;
+
+z-index:1;
+
+}
+
+/* ==========================================
+   FOOTER MAP BACKGROUND
+========================================== */
+
+.footer-bg{
+
+position:absolute;
+inset:0;
+
+z-index:1;
+pointer-events:none;
+
+}
+
+.footer-bg img{
+
+width:100%;
+height:100%;
+
+object-fit:cover;
+
+opacity:0.10;
+
+mix-blend-mode:soft-light;
+
+filter:
+grayscale(20%)
+brightness(1.05);
+
+}
+
+/* ==========================================
+   FOOTER WRAPPER
+========================================== */
+
+.footer-wrapper{
+
+position:relative;
+z-index:2;
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(220px,1fr));
+
+gap:35px;
+
+margin-bottom:30px;
+
+}
+
+/* ==========================================
+   FOOTER COLUMN
+========================================== */
+
+.footer-col{
+
+min-width:0;
+
+}
+
+/* ==========================================
+   FOOTER LOGO
+========================================== */
+
+.footer-logo img{
+
+width:150px;
+height:auto;
+
+object-fit:contain;
+
+display:block;
+
+margin-bottom:14px;
+
+opacity:.95;
+
+filter:
+drop-shadow(0 4px 10px rgba(0,0,0,0.18));
+
+}
+
+/* ==========================================
+   FOOTER TEXT
+========================================== */
+
+.footer-col p{
+
+font-size:15px;
+line-height:1.7;
+
+color:
+rgba(255,255,255,0.82);
+
+max-width:280px;
+
+text-align:left;
+
+hyphens:none;
+-webkit-hyphens:none;
+-ms-hyphens:none;
+
+word-break:normal;
+overflow-wrap:normal;
+
+}
+
+/* ==========================================
+   FOOTER BRAND DESCRIPTION
+========================================== */
+
+.footer-brand > p{
+text-align:justify;
+text-justify:inter-word;
+}
+
+/* ==========================================
+   FOOTER TITLES
+========================================== */
+
+.footer-col h3{
+
+font-size:20px;
+font-weight:600;
+
+margin-bottom:18px;
+
+color:#ffffff;
+
+position:relative;
+
+}
+
+.footer-col h3::after{
+
+content:"";
+
+position:absolute;
+left:0;
+bottom:-8px;
+
+width:38px;
+height:2px;
+
+background:
+rgba(240,182,63,0.78);
+
+border-radius:20px;
+
+}
+
+/* ==========================================
+   FOOTER LIST
+========================================== */
+
+.footer-col ul{
+
+display:flex;
+flex-direction:column;
+gap:12px;
+
+}
+
+.footer-col ul li{
+
+font-size:15px;
+line-height:1.6;
+
+color:
+rgba(255,255,255,0.82);
+
+}
+
+/* ==========================================
+   FOOTER LINKS
+========================================== */
+
+.footer-col ul li a{
+
+color:
+rgba(255,255,255,0.82);
+
+transition:all .3s ease;
+
+}
+
+.footer-col ul li a:hover{
+
+color:#f0b63f;
+
+padding-left:4px;
+
+}
+
+/* ==========================================
+   FOOTER SOCIAL
+========================================== */
+
+.footer-social{
+
+display:flex;
+align-items:center;
+gap:12px;
+
+margin-top:18px;
+
+}
+
+.footer-social a{
+
+width:40px;
+height:40px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+border-radius:50%;
+
+background:
+rgba(255,255,255,0.08);
+
+border:
+1px solid rgba(255,255,255,0.12);
+
+color:#ffffff;
+font-size:18px;
+
+transition:var(--transition);
+
+backdrop-filter:blur(8px);
+
+}
+
+.footer-social a:hover{
+
+transform:translateY(-3px);
+
+background:
+rgba(242,184,58,0.20);
+
+color:#f0b63f;
+
+border-color:
+rgba(242,184,58,0.35);
+
+}
+
+/* ==========================================
+   CONTACT (DESKTOP FIX)
+========================================== */
+
+.footer-contact-list{
+display:flex;
+flex-direction:column;
+gap:18px;
+}
+
+.footer-contact-list li{
+display:flex;
+align-items:center; /* FIX UTAMA */
+gap:14px;
+}
+
+.contact-icon{
+
+width:40px;
+height:40px;
+
+flex-shrink:0;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+border-radius:50%;
+
+background:
+rgba(255,255,255,0.06);
+
+border:
+1px solid rgba(240,182,63,0.20);
+
+color:#f0b63f;
+
+font-size:17px;
+
+transition:
+all .35s ease;
+
+-webkit-backdrop-filter:blur(8px);
+backdrop-filter:blur(8px);
+
+}
+
+.footer-contact-list li:hover .contact-icon{
+
+transform:
+translateY(-2px)
+scale(1.04);
+
+background:
+rgba(240,182,63,0.12);
+
+border-color:
+rgba(240,182,63,0.45);
+
+color:#ffffff;
+
+box-shadow:
+0 8px 18px rgba(240,182,63,0.14);
+
+}
+
+.contact-info{
+display:flex;
+align-items:center; /* FIX SEJAJAR */
+gap:6px;
+flex-wrap:wrap;
+}
+
+.contact-info span{
+font-size:13px;
+font-weight:600;
+color:#f0b63f;
+margin:0;
+}
+
+.contact-info p{
+margin:0;
+font-size:14px;
+line-height:1.7;
+}
+
+/* ==========================================
+   FOOTER BOTTOM
+========================================== */
+
+.footer-bottom{
+
+position:relative;
+z-index:2;
+
+padding-top:18px;
+
+border-top:
+1px solid rgba(255,255,255,0.08);
+
+text-align:center;
+
+}
+
+.footer-bottom p{
+
+font-size:14px;
+
+letter-spacing:.3px;
+
+color:
+rgba(255,255,255,0.65);
+
+}
+
+/* ==========================================
+   SHOW ANIMATION
+========================================== */
+
+#footer.show-footer{
+
+opacity:1;
+transform:translateY(0);
+
+}
