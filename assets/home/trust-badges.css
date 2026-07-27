@@ -1,0 +1,288 @@
+/* ==========================================
+TRUST BADGES
+========================================== */
+
+#trust-badges{
+width:100%;
+padding:12px 0;
+margin-top:0;
+
+background:var(--white);
+
+border-top:1px solid var(--border);
+border-bottom:1px solid var(--border);
+
+position:relative;
+z-index:2;
+}
+
+/* ==========================================
+TRUST WRAPPER
+========================================== */
+
+.trust-wrapper{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:30px;
+}
+
+/* ==========================================
+TRUST ITEM
+========================================== */
+
+.trust-item{
+flex:1;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+gap:12px;
+
+transition:
+transform .25s ease,
+box-shadow .25s ease;
+}
+
+/* ==========================================
+TRUST ICON
+========================================== */
+
+.trust-icon{
+display:flex;
+align-items:center;
+justify-content:center;
+flex-shrink:0;
+}
+
+.trust-icon i{
+font-size:34px;
+color:var(--primary);
+line-height:1;
+display:block;
+}
+
+/* ==========================================
+TRUST TEXT
+========================================== */
+
+.trust-text{
+display:flex;
+align-items:center;
+}
+
+.trust-text h4{
+font-size:13px;
+font-weight:600;
+line-height:1.4;
+color:var(--primary);
+letter-spacing:.2px;
+text-transform:uppercase;
+}
+
+/* ==========================================
+DESKTOP
+========================================== */
+
+@media (min-width:993px){
+
+#trust-badges{
+padding:18px 0 22px;
+}
+
+.trust-wrapper{
+gap:40px;
+}
+
+}
+
+/* ==========================================
+TABLET
+========================================== */
+
+@media (max-width:992px) and (min-width:769px){
+
+.trust-wrapper{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:14px;
+}
+
+#trust-badges .trust-item{
+
+display:flex;
+align-items:center;
+justify-content:flex-start;
+
+gap:12px;
+
+padding:14px 18px;
+padding-left:20px;
+
+border:1px solid var(--border);
+
+border-radius:18px;
+
+background:var(--white);
+
+box-shadow:
+0 6px 14px rgba(0,0,0,.04);
+}
+
+.trust-item:active{
+transform:translateY(1px);
+}
+
+.trust-icon i{
+font-size:26px;
+}
+
+.trust-text{
+min-height:32px;
+}
+
+.trust-text h4{
+font-size:12px;
+line-height:1.3;
+text-align:left;
+}
+
+/* reveal */
+
+#trust-badges.animate-ready .trust-item{
+opacity:0;
+transform:translateY(18px);
+
+transition:
+opacity .6s ease,
+transform .6s ease;
+}
+
+#trust-badges.animate-ready .trust-item.show{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+/* ==========================================
+MOBILE
+========================================== */
+
+@media (max-width:768px){
+
+#trust-badges{
+padding:18px 0;
+}
+
+/* ==========================================
+WRAPPER
+========================================== */
+
+.trust-wrapper{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:12px;
+}
+
+/* ==========================================
+TRUST ITEM
+========================================== */
+
+#trust-badges .trust-item{
+
+display:flex;
+align-items:center;
+justify-content:flex-start;
+
+gap:10px;
+
+padding:12px 12px;
+padding-left:14px;
+
+border:1px solid var(--border);
+
+border-radius:16px;
+
+background:linear-gradient(
+180deg,
+#ffffff 0%,
+#fcfcf8 100%
+);
+
+box-shadow:
+0 6px 14px rgba(0,0,0,.04);
+
+transition:
+all .28s ease;
+}
+
+/* ==========================================
+ICON
+========================================== */
+
+.trust-icon i{
+font-size:22px;
+
+transition:
+color .25s ease,
+transform .25s ease;
+}
+
+/* ==========================================
+TEXT
+========================================== */
+
+.trust-text{
+min-height:34px;
+}
+
+.trust-text h4{
+font-size:11px;
+line-height:1.3;
+text-align:left;
+
+transition:
+color .25s ease;
+}
+
+/* ==========================================
+TOUCH FEEDBACK
+========================================== */
+
+#trust-badges .trust-item:active{
+
+background:linear-gradient(
+180deg,
+rgba(46,94,62,.08) 0%,
+rgba(240,182,63,.08) 100%
+);
+
+border-color:
+rgba(46,94,62,.22);
+
+box-shadow:
+0 10px 20px rgba(46,94,62,.08);
+
+transform:
+scale(.98)
+translateY(1px);
+
+}
+
+#trust-badges .trust-item:active .trust-icon i{
+
+color:#d9a327;
+
+transform:scale(1.08);
+
+}
+
+#trust-badges .trust-item:active .trust-text h4{
+
+color:var(--primary);
+
+}
+
+}

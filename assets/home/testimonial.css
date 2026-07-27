@@ -1,0 +1,235 @@
+/* ==========================================
+   TESTIMONIAL SECTION (FINAL DESKTOP POLISH)
+========================================== */
+
+#testimonial{
+    padding:70px 0; /* lebih lega */
+    background:var(--cream);
+}
+
+/* ==========================================
+   SECTION HEADING
+========================================== */
+
+#testimonial .section-heading{
+    text-align:center;
+    margin-bottom:60px; /* tambah jarak ke avatar */
+}
+
+#testimonial .section-heading h2{
+    font-size:30px;
+    color:var(--primary);
+    margin:14px 0;
+    line-height:1.2;
+}
+
+/* ==========================================
+   WRAPPER (FIX UTAMA DISINI)
+========================================== */
+
+.testimonial-wrapper{
+    display:flex;
+    justify-content:space-between; /* sebar penuh */
+    align-items:flex-start;
+
+    width:100%;
+    max-width:1100px; /* diperlebar dari 900 */
+    margin:0 auto;
+
+    gap:0; /* tidak perlu gap lagi */
+}
+
+/* ==========================================
+   ITEM
+========================================== */
+
+.testimonial-item{
+    text-align:center;
+    flex:1; /* bagi rata ruang */
+}
+
+/* ==========================================
+   AVATAR GROUP
+========================================== */
+
+.avatar-group{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    cursor:pointer;
+}
+
+/* ==========================================
+   AVATAR (BESAR + FLOATING)
+========================================== */
+
+@keyframes floatAvatar{
+    0%{ transform:translateY(0); }
+    50%{ transform:translateY(-6px); }
+    100%{ transform:translateY(0); }
+}
+
+.avatar-group img{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    object-fit:cover;
+
+    filter:grayscale(100%);
+    transition:0.25s ease;
+
+    animation: floatAvatar 4s ease-in-out infinite;
+}
+
+/* HOVER AVATAR */
+.avatar-group:hover img{
+    filter:grayscale(0%);
+    transform:scale(1.08);
+}
+
+/* ==========================================
+   HOVER FOCUS EFFECT
+========================================== */
+
+.testimonial-wrapper:hover .avatar-group img{
+    opacity:0.4;
+}
+
+.avatar-group:hover img{
+    opacity:1 !important;
+}
+
+/* ==========================================
+   POPUP
+========================================== */
+
+.testimonial-bubble{
+    position:absolute;
+
+    bottom:calc(100% + 12px);
+    left:50%;
+
+    transform:translate(-50%, 12px) scale(0.92);
+
+    width:230px;
+    padding:12px 14px;
+
+    background:var(--dark);
+    color:var(--white);
+
+    border-radius:12px;
+    font-size:13px;
+    line-height:1.5;
+
+    box-shadow:0 12px 30px rgba(0,0,0,0.18);
+
+    opacity:0;
+    visibility:hidden;
+
+    transition:
+        transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+        opacity 0.25s ease;
+
+    z-index:50;
+}
+
+/* ARROW */
+.testimonial-bubble::after{
+    content:"";
+    position:absolute;
+    top:100%;
+    left:50%;
+    transform:translateX(-50%);
+
+    border-width:7px;
+    border-style:solid;
+    border-color:var(--dark) transparent transparent transparent;
+}
+
+/* ==========================================
+   ANTI FLICKER
+========================================== */
+
+.avatar-group::before{
+    content:"";
+    position:absolute;
+    inset:-20px;
+}
+
+/* ==========================================
+   SHOW POPUP
+========================================== */
+
+.avatar-group:hover .testimonial-bubble{
+    opacity:1;
+    visibility:visible;
+    transform:translate(-50%, 0) scale(1);
+}
+
+/* ==========================================
+   TEXT
+========================================== */
+
+.testimonial-item h4{
+    font-size:16px;
+    margin-top:12px;
+    margin-bottom:4px;
+}
+
+.testimonial-item span{
+    font-size:13px;
+    color:#8A7765;
+    letter-spacing:0.3px;
+}
+
+/* ==========================================
+   SWIPE HINT
+========================================== */
+
+.testimonial-swipe-hint{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:6px;
+
+    margin-top:30px;
+
+    font-size:12px;
+    color:#9CA3AF;
+
+    opacity:0.7;
+    transition:0.3s;
+}
+
+/* ICON ANIMATION */
+@keyframes swipeMove{
+    0%{ transform:translateX(0); }
+    50%{ transform:translateX(6px); }
+    100%{ transform:translateX(0); }
+}
+
+.testimonial-swipe-hint i{
+    font-size:14px;
+    animation: swipeMove 1.4s ease-in-out infinite;
+}
+
+/* FADE HINT */
+.testimonial-wrapper:hover ~ .testimonial-swipe-hint{
+    opacity:0.3;
+}
+
+/* ==========================================
+   RESPONSIVE (LOCK)
+========================================== */
+
+@media (max-width:768px){
+
+    #testimonial{
+        padding:36px 0;
+    }
+
+    #testimonial .section-heading h2{
+        font-size:24px;
+    }
+
+}

@@ -1,0 +1,497 @@
+/* ==========================================
+   FEATURED PRODUCT
+========================================== */
+
+#featured-product{
+padding:45px 0;
+background:var(--white);
+
+opacity:0;
+
+transform:
+translateY(24px);
+
+transition:
+opacity .8s ease,
+transform .8s cubic-bezier(.22,1,.36,1);
+}
+
+/* ==========================================
+   FEATURED WRAPPER
+========================================== */
+
+.featured-wrapper{
+display:grid;
+grid-template-columns:40% 60%;
+align-items:center;
+gap:28px;
+}
+
+/* ==========================================
+   FEATURED IMAGE
+========================================== */
+
+.featured-image{
+width:100%;
+display:flex;
+justify-content:flex-start;
+align-items:center;
+
+grid-column:1;
+grid-row:1 / span 2;
+
+position:relative;
+}
+
+.featured-image img{
+width:100%;
+max-width:400px;
+height:auto;
+display:block;
+object-fit:cover;
+border-radius:0;
+position:relative;
+z-index:2;
+
+
+
+/* smooth blend fade */
+-webkit-mask-image:linear-gradient(
+to right,
+rgba(0,0,0,1) 78%,
+rgba(0,0,0,0)
+);
+
+mask-image:linear-gradient(
+to right,
+rgba(0,0,0,1) 78%,
+rgba(0,0,0,0)
+);
+}
+
+/* ==========================================
+   PRODUCT SPOTLIGHT
+========================================== */
+
+.featured-image::before{
+
+content:"";
+
+position:absolute;
+
+width:260px;
+height:260px;
+
+left:50%;
+top:50%;
+
+transform:
+translate(-50%,-50%);
+
+border-radius:50%;
+
+background:
+radial-gradient(
+circle,
+rgba(46,94,62,.10) 0%,
+rgba(240,182,63,.08) 45%,
+transparent 75%
+);
+
+pointer-events:none;
+
+z-index:0;
+
+opacity:.9;
+
+}
+
+/* ==========================================
+   FEATURED CONTENT
+========================================== */
+
+.featured-content{
+width:100%;
+max-width:480px;
+grid-column:2;
+grid-row:1;
+}
+
+.featured-content h2{
+font-size:34px;
+color:var(--primary);
+margin-bottom:14px;
+line-height:1.15;
+max-width:360px;
+}
+
+.featured-content p{
+font-size:15px;
+line-height:1.7;
+color:var(--text-light);
+margin-bottom:20px;
+max-width:430px;
+text-align:justify;
+}
+
+/* ==========================================
+   PRODUCT META
+========================================== */
+
+.product-meta{
+display:flex;
+flex-direction:column;
+gap:10px;
+margin-bottom:0;
+}
+
+.meta-item{
+font-size:15px;
+color:var(--dark);
+line-height:1.5;
+}
+
+/* ==========================================
+   FEATURED BUTTONS (UPDATED)
+========================================== */
+
+.featured-buttons{
+display:flex;
+align-items:center;
+gap:12px;
+flex-wrap:wrap;
+
+grid-column:2;
+grid-row:2;
+
+margin-top:20px;
+}
+
+.featured-buttons .btn-primary,
+.featured-buttons .btn-secondary{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:10px;
+
+padding:13px 24px;
+
+font-size:14px;
+font-weight:600;
+
+border-radius:999px;
+
+transition:.3s ease;
+}
+
+/* ICON SUPPORT (NEW) */
+.featured-buttons .btn-icon{
+font-size:16px;
+display:flex;
+align-items:center;
+}
+
+/* ==========================================
+   ANIMATION STATE
+========================================== */
+
+#featured-product.show-featured{
+opacity:1;
+transform:translateY(0);
+}
+
+/* ==========================================
+   TABLET ONLY
+========================================== */
+
+@media (max-width:992px) and (min-width:769px){
+
+.featured-wrapper{
+display:flex;
+flex-direction:column;
+gap:18px;
+text-align:center;
+}
+
+.featured-content{
+max-width:100%;
+order:1;
+}
+
+.featured-image{
+display:flex;
+width:100%;
+justify-content:center;
+align-items:center;
+order:2;
+}
+
+.featured-buttons{
+order:3;
+
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:14px;
+
+width:100%;
+max-width:400px;
+margin:0 auto;
+}
+
+.featured-buttons .btn-primary,
+.featured-buttons .btn-secondary{
+width:100%;
+padding:12px 18px;
+font-size:13px;
+}
+
+.featured-image img{
+max-width:420px;
+height:auto;
+
+-webkit-mask-image:none;
+mask-image:none;
+}
+
+.featured-content h2{
+font-size:30px;
+max-width:100%;
+margin:0 auto 14px;
+}
+
+.featured-content p{
+font-size:16px;
+text-align:left;
+max-width:100%;
+margin:0 auto 18px;
+}
+
+.product-meta{
+gap:12px;
+margin-bottom:0;
+}
+
+.meta-item{
+padding:12px 16px;
+border:1px solid var(--border);
+border-radius:12px;
+background:var(--cream);
+text-align:left;
+}
+
+}
+
+/* ==========================================
+   MOBILE ONLY
+========================================== */
+
+@media (max-width:768px){
+
+#featured-product{
+padding:35px 0;
+}
+
+.featured-wrapper{
+display:flex;
+flex-direction:column;
+gap:14px;
+text-align:center;
+}
+
+.featured-content{
+max-width:100%;
+order:1;
+}
+
+.featured-image{
+display:flex;
+width:100%;
+justify-content:center;
+align-items:center;
+order:2;
+}
+
+.featured-buttons{
+order:3;
+
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:10px;
+
+width:100%;
+max-width:300px;
+margin:0 auto;
+}
+
+.featured-buttons .btn-primary,
+.featured-buttons .btn-secondary{
+width:100%;
+padding:12px 14px;
+font-size:13px;
+}
+
+.featured-image img{
+max-width:100%;
+height:auto;
+
+-webkit-mask-image:none;
+mask-image:none;
+}
+
+.featured-content .section-label{
+margin:0 auto 14px;
+display:inline-flex;
+}
+
+.featured-content h2{
+font-size:24px;
+max-width:100%;
+margin:0 auto 12px;
+}
+
+.featured-content p{
+font-size:14px;
+line-height:1.7;
+
+text-align:justify;
+text-justify:inter-word;
+
+max-width:100%;
+margin:0 auto 16px;
+}
+
+.product-meta{
+gap:10px;
+margin-bottom:0;
+}
+
+.meta-item{
+padding:11px 14px;
+
+border:1px solid var(--border);
+
+border-radius:12px;
+
+background:linear-gradient(
+180deg,
+#ffffff 0%,
+#fcfcf8 100%
+);
+
+text-align:left;
+
+font-size:14px;
+
+transition:
+all .25s ease;
+}
+
+.meta-item:active{
+
+background:linear-gradient(
+180deg,
+rgba(46,94,62,.06) 0%,
+rgba(240,182,63,.06) 100%
+);
+
+border-color:
+rgba(46,94,62,.20);
+
+}
+
+/* ==========================================
+   FEATURED PRODUCT — COMPACT PREMIUM (FINAL)
+========================================== */
+
+@media (min-width:993px){
+
+/* ==========================================
+   WRAPPER SPACING (DIKOMPAKSI)
+========================================== */
+
+#featured-product{
+padding:55px 0; /* dari 80 → 55 */
+}
+
+.featured-wrapper{
+gap:28px; /* kembali balance */
+align-items:center;
+}
+
+/* ==========================================
+   IMAGE — TETAP HIDUP TAPI TERKONTROL
+========================================== */
+
+.featured-image img{
+max-width:420px; /* sedikit diperkecil */
+transition:transform .35s ease;
+}
+
+.featured-image:hover img{
+transform:scale(1.03);
+}
+
+/* ==========================================
+   CONTENT — RAPATKAN SEDIKIT
+========================================== */
+
+.featured-content{
+max-width:500px;
+}
+
+.featured-content h2{
+font-size:34px;
+line-height:1.2;
+margin-bottom:14px;
+}
+
+.featured-content p{
+font-size:15px;
+line-height:1.7;
+margin-bottom:18px;
+}
+
+/* ==========================================
+   META — TETAP ELEGAN
+========================================== */
+
+.product-meta{
+gap:10px;
+}
+
+.meta-item{
+padding:9px 13px;
+border:1px solid var(--border);
+border-radius:10px;
+background:var(--cream);
+
+transition:all .2s ease;
+}
+
+.meta-item:hover{
+background:#fff;
+box-shadow:0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* ==========================================
+   BUTTON — RAPATKAN
+========================================== */
+
+.featured-buttons{
+margin-top:18px; /* dari 24 → 18 */
+gap:12px;
+}
+
+.featured-buttons .btn-primary,
+.featured-buttons .btn-secondary{
+padding:13px 24px;
+font-size:14px;
+}
+
+.featured-buttons a:hover{
+transform:translateY(-2px);
+box-shadow:0 8px 18px rgba(0,0,0,0.10);
+}
+
+}
+
