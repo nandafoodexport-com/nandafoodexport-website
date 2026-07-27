@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <!-- =========================================
+         HOME
+    ========================================== -->
+    <url>
+        <loc>https://www.nandafoodexport.com/</loc>
+        <lastmod>2026-07-27</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- =========================================
+         PRODUCTS
+    ========================================== -->
+    <url>
+        <loc>https://www.nandafoodexport.com/nandafood-product.html</loc>
+        <lastmod>2026-07-27</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- =========================================
+         EXPORT
+    ========================================== -->
+    <url>
+        <loc>https://www.nandafoodexport.com/nandafood-export.html</loc>
+        <lastmod>2026-07-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- =========================================
+         ABOUT
+    ========================================== -->
+    <url>
+        <loc>https://www.nandafoodexport.com/nandafood-about.html</loc>
+        <lastmod>2026-07-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- =========================================
+         CONTACT
+    ========================================== -->
+    <url>
+        <loc>https://www.nandafoodexport.com/nandafood-contact.html</loc>
+        <lastmod>2026-07-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- =========================================
+         FAQ
+    ========================================== -->
+    <url>
+        <loc>https://www.nandafoodexport.com/nandafood-faq.html</loc>
+        <lastmod>2026-07-23</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- =========================================
+         CART
+    ========================================== -->
+    <url>
+        <loc>https://www.nandafoodexport.com/cart.html</loc>
+        <lastmod>2026-07-24</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <!-- =========================================
+         SHIPPING POLICY
+    ========================================== -->
+    <url>
+        <loc>https://www.nandafoodexport.com/shipping-policy.html</loc>
+        <lastmod>2026-07-27</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.4</priority>
+    </url>
+
+    <!-- =========================================
+         RETURN & REFUND POLICY
+    ========================================== -->
+    <url>
+        <loc>https://www.nandafoodexport.com/return-policy.html</loc>
+        <lastmod>2026-07-27</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.4</priority>
+    </url>
+
+    <!-- =========================================
+         HTML SITEMAP
+    ========================================== -->
+    <url>
+        <loc>https://www.nandafoodexport.com/sitemap.html</loc>
+        <lastmod>2026-07-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.3</priority>
+    </url>
+
+</urlset>

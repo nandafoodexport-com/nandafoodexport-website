@@ -1,0 +1,11 @@
+# ==========================================
+# robots.txt
+# Nanda Food Export by mawlanaweb
+# https://www.nandafoodexport.com/
+# Last Updated: 2026-07-24
+# ==========================================
+
+User-agent: *
+Allow: /
+
+Sitemap: https://www.nandafoodexport.com/sitemap.xml
