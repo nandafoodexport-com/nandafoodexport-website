@@ -1,0 +1,71 @@
+# ==========================================
+# NANDA FOOD EXPORT - GITIGNORE
+# Static Website / GitHub Pages
+# ==========================================
+
+# ------------------------------------------
+# OPERATING SYSTEM
+# ------------------------------------------
+.DS_Store
+.DS_Store?
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ------------------------------------------
+# EDITOR / IDE
+# ------------------------------------------
+.vscode/
+.idea/
+*.code-workspace
+*.sublime-project
+*.sublime-workspace
+
+# ------------------------------------------
+# TEMPORARY / BACKUP FILES
+# ------------------------------------------
+*.tmp
+*.temp
+*.bak
+*.backup
+*.swp
+*.swo
+*~
+~$*
+
+# ------------------------------------------
+# LOG FILES
+# ------------------------------------------
+*.log
+logs/
+
+# ------------------------------------------
+# NODE / PACKAGE MANAGERS
+# ------------------------------------------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ------------------------------------------
+# BUILD / CACHE
+# ------------------------------------------
+.cache/
+.parcel-cache/
+.sass-cache/
+dist/
+build/
+
+# ------------------------------------------
+# ENVIRONMENT / SECRETS
+# ------------------------------------------
+.env
+.env.*
+!.env.example
+
+# ------------------------------------------
+# LOCAL DEVELOPMENT
+# ------------------------------------------
+.history/
+.vscode-test/
