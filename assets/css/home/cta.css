@@ -1,0 +1,175 @@
+/* ==========================================
+   CTA SECTION
+========================================== */
+
+#cta{
+
+padding:70px 0;
+
+position:relative;
+overflow:hidden;
+
+isolation:isolate;
+
+/* background image */
+
+background:
+linear-gradient(
+rgba(32,74,47,0.62),
+rgba(32,74,47,0.62)
+),
+url("../../img/cta-bg.webp");
+
+/* background setup */
+
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+
+}
+
+/* ==========================================
+   SOFT OVERLAY
+========================================== */
+
+#cta::before{
+
+content:"";
+
+position:absolute;
+inset:0;
+
+z-index:1;
+
+background:
+
+radial-gradient(
+circle at top left,
+rgba(255,255,255,0.05),
+transparent 40%
+),
+
+radial-gradient(
+circle at bottom right,
+rgba(255,255,255,0.04),
+transparent 35%
+);
+
+pointer-events:none;
+
+}
+
+/* ==========================================
+   CTA WRAPPER
+========================================== */
+
+.cta-wrapper{
+
+position:relative;
+z-index:2;
+
+max-width:900px;
+margin:auto;
+
+text-align:center;
+
+}
+
+/* ==========================================
+   LABEL
+========================================== */
+
+#cta .section-label{
+
+margin-bottom:20px;
+
+}
+
+/* ==========================================
+   TITLE
+========================================== */
+
+.cta-wrapper h2{
+
+font-size:54px;
+line-height:1.15;
+
+color:#ffffff;
+
+margin-bottom:22px;
+
+}
+
+/* ==========================================
+   DESCRIPTION
+========================================== */
+
+.cta-wrapper p{
+
+font-size:18px;
+line-height:1.7;
+
+color:rgba(255,255,255,0.88);
+
+max-width:700px;
+margin:0 auto 34px;
+
+}
+
+/* ==========================================
+   CTA BUTTONS
+========================================== */
+
+.cta-buttons{
+
+display:flex;
+justify-content:center;
+align-items:center;
+gap:12px;
+
+flex-wrap:wrap;
+
+}
+
+/* ==========================================
+   BUTTON STYLE (SYNC WITH FEATURED)
+========================================== */
+
+.cta-buttons .btn-primary,
+.cta-buttons .btn-secondary{
+
+display:flex;
+align-items:center;
+justify-content:center;
+gap:10px;
+
+padding:13px 24px;
+
+font-size:14px;
+font-weight:600;
+
+border-radius:999px;
+
+/* shadow ringan (tidak bentrok dengan base.css) */
+box-shadow:
+0 6px 16px rgba(0,0,0,0.12);
+
+}
+
+/* ==========================================
+   ICON SUPPORT
+========================================== */
+
+.cta-buttons .btn-icon{
+font-size:16px;
+display:flex;
+align-items:center;
+}
+
+/* ==========================================
+   REMOVE OLD HOVER CONFLICT
+========================================== */
+
+.cta-buttons a:hover{
+transform:none;
+}
