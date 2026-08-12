@@ -447,6 +447,27 @@ gtag('config','G-Z0CX88TKE4');
 }
 </script>
 
+<!-- PWA Service Worker -->
+<script>
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+      navigator.serviceWorker
+        .register("/service-worker.js")
+        .then((registration) => {
+          console.log(
+            "Nanda Food Export PWA aktif:",
+            registration.scope
+          );
+        })
+        .catch((error) => {
+          console.error(
+            "Gagal mendaftarkan PWA:",
+            error
+          );
+        });
+    });
+  }
+</script>
 
 </head>
 
